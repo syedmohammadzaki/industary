@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry - Industrial Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            color: #333333;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .top-bar {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 13px;
+            padding: 10px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-socials a {
+            color: #cccccc;
+            margin-right: 15px;
+            font-size: 12px;
+        }
+
+        .top-bar-socials a:hover {
+            color: #f3b200;
+        }
+
+        .top-bar-contact span {
+            margin-left: 20px;
+            color: #cccccc;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: #222222;
+        }
+
+        .logo-icon {
+            color: #f3b200;
+            margin-right: 10px;
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333333;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #f3b200;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: #ffffff;
+            text-align: center;
+            padding: 120px 20px 180px 20px;
+        }
+
+        .hero-sub {
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-desc {
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+            color: #dddddd;
+            font-size: 14px;
+        }
+
+        .btn-yellow {
+            background-color: #f3b200;
+            color: #222222;
+            padding: 12px 30px;
+            border: none;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-yellow:hover {
+            background-color: #e0a400;
+        }
+
+        .services-container {
+            max-width: 1100px;
+            margin: -70px auto 60px auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 40px 25px;
+            text-align: center;
+            flex: 1;
+            margin: 0 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-radius: 4px;
+        }
+
+        .hex-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px auto;
+            border: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666666;
+            transform: rotate(45deg);
+            border-radius: 8px;
+        }
+
+        .hex-icon i {
+            transform: rotate(-45deg);
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #222222;
+        }
+
+        .service-card p {
+            font-size: 13px;
+            color: #777777;
+            line-height: 1.8;
+        }
+
+        .quote-section {
+            background-color: #f9f9f9;
+            padding: 80px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .quote-info {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .yellow-tag {
+            color: #f3b200;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .quote-info h2 {
+            font-size: 38px;
+            color: #222222;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .quote-info p {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .quote-form-container {
+            width: 420px;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80') center/cover;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .quote-form-container h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #ffffff;
+            font-size: 13px;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #cccccc;
+        }
+
+        textarea.form-control {
+            height: 90px;
+            resize: none;
+        }
+
+        .btn-block {
+            width: 100%;
+            padding: 14px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+            }
+            .nav-links li {
+                margin-left: 0;
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+            .services-container {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .service-card {
+                margin: 0 0 20px 0;
+            }
+            .quote-section {
+                flex-direction: column;
+            }
+            .quote-info {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            .quote-form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+        </div>
+        <div class="top-bar-contact">
+            <span>+880 012 3654 896</span>
+            <span>support@colorlib.com</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf logo-icon"></i>
+            <span>Industry</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">BLOG <i class="fas fa-angle-down"></i></a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ELEMENTS</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-sub">DON'T LOOK FURTHER, HERE IS THE KEY</div>
+        <h1 class="hero-title">We're Industrial solution</h1>
+        <p class="hero-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, sed do eiusmod tempor incididunt.</p>
+        <a href="#" class="btn-yellow">GET STARTED</a>
+    </header>
+
+    <section class="services-container">
+        <div class="service-card">
+            <div class="hex-icon">
+                <i class="fas fa-magic"></i>
+            </div>
+            <h3>Maintenance</h3>
+            <p>inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace. That's why.</p>
+        </div>
+        <div class="service-card">
+            <div class="hex-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Residental Service</h3>
+            <p>inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace. That's why.</p>
+        </div>
+        <div class="service-card">
+            <div class="hex-icon">
+                <i class="fas fa-bug"></i>
+            </div>
+            <h3>Commercial Service</h3>
+            <p>inappropriate behavior is often laughed off as "boys will be boys," women face higher conduct standards especially in the workplace. That's why.</p>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="quote-info">
+            <div class="yellow-tag">Brand new app to blow your mind</div>
+            <h2>We've made a life<br>that will change you</h2>
+            <p><strong>We are here to listen from you deliver exellence</strong></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+            <a href="#" class="btn-yellow" style="margin-top: 15px;">Get Started Now</a>
+        </div>
+        
+        <div class="quote-form-container">
+            <h3>Request a Quote</h3>
+            <div>
+                <input type="text" class="form-control" placeholder="Select Service">
+                <input type="text" class="form-control" placeholder="name">
+                <input type="text" class="form-control" placeholder="Phone Number">
+                <input type="email" class="form-control" placeholder="Email Address">
+                <textarea class="form-control" placeholder="Message"></textarea>
+                <button type="button" class="btn-yellow btn-block">Request Free Quote</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
